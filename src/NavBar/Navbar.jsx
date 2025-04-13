@@ -1,25 +1,38 @@
-import React from 'react';
-import Link from './Link';
+import React, { useState } from "react";
+import Link from "./Link";
+import { Menu, X } from "lucide-react";
 
 const navigationData = [
-    { id: 1, name: "Home", path: "/" },
-    { id: 2, name: "About", path: "/about" },
-    { id: 3, name: "Services", path: "/services" },
-    { id: 4, name: "Blog", path: "/blog" },
-    { id: 5, name: "Contact", path: "/contact" }
-  ];
-  
+  { id: 1, name: "Home", path: "/" },
+  { id: 2, name: "About", path: "/about" },
+  { id: 3, name: "Services", path: "/services" },
+  { id: 4, name: "Blog", path: "/blog" },
+  { id: 5, name: "Contact", path: "/contact" },
+];
+
 const Navbar = () => {
-    return (
-        <div>
-      <ul className='flex justify-between'>
-        { 
-            navigationData.map(route=>  <Link route={route} key={route.id}> </Link>)
-        }
+  const [open,setOpen] = useState(false)
+  const links= navigationData.map((route) => (
+    <Link route={route} key={route.id}>
+      {" "}
+    </Link>
+  ))
+
+  return (
+    <nav className="flex justify-between mx-10">
+      <span className="flex" onClick={()=> setOpen(!open)}>
+        { open ? <X className="md:hidden"> </X> :  <Menu className="md:hidden"> </Menu>}
+       <ul className="md:hidden"> 
+       {links}
+       </ul>
+       <h3 className="ml-4">Mynav</h3>
+      </span>
+      <ul className="md:flex hidden">
+       {links}
       </ul>
-            
-        </div>
-    );
+      <button>Sing in</button>
+    </nav>
+  );
 };
 
 export default Navbar;
