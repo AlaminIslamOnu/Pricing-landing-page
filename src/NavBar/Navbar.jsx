@@ -19,10 +19,12 @@ const Navbar = () => {
   ))
 
   return (
-    <nav className="flex justify-between mx-10">
+    <nav className="flex justify-between mx-10 mt-4">
       <span className="flex" onClick={()=> setOpen(!open)}>
         { open ? <X className="md:hidden"> </X> :  <Menu className="md:hidden"> </Menu>}
-       <ul className="md:hidden"> 
+       <ul className={`md:hidden absolute duration-1000
+        ${open ? "top-7" : "-top-40"}
+        bg-amber-300 `}> 
        {links}
        </ul>
        <h3 className="ml-4">Mynav</h3>
