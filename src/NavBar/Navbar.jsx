@@ -32,7 +32,7 @@ const Navbar = () => {
       <ul className="md:flex hidden">
        {links}
       </ul>
-      <button>Sing in</button>
+      <button className="btn bg-amber-300 text-black">Sing in</button>
     </nav>
   );
 };

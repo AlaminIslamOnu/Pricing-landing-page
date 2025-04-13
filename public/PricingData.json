@@ -23,9 +23,7 @@
         "Unlimited use of all gym equipment",
         "3 Free personal training sessions per month",
         "Access to premium fitness classes",
-        "Access to sauna and steam room",
-        "Discount on merchandise and services",
-        "Free towel service"
+        "Access to sauna and steam room"
       ]
     },
     {
@@ -39,10 +37,8 @@
         "Unlimited use of gym equipment",
         "Free personal training sessions for each adult",
         "Access to family fitness classes",
-        "Free childcare during gym visits",
-        "Discounts on family wellness programs",
-        "Free access to family wellness events",
-        "Exclusive family fitness challenges"
+        "Free childcare during gym visits" 
+      
       ]
     }
   ]
